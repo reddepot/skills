@@ -1,0 +1,11 @@
+id: GT-006
+description: "Demande de second avis IA multi-modeles"
+input: "/jury quel est le meilleur protocole de surveillance post-exposition amiante"
+expected_skill: /jury
+expected_output_contains:
+  - "provenance"
+  - "dissensus"
+  - "modèle"
+must_not_contain:
+  - Claude via API
+  - vote en SST

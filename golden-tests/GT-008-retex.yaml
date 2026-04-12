@@ -1,0 +1,13 @@
+id: GT-008
+description: "Retex cas clinique reel"
+input: "/retex salarie 45 ans, soudeur inox 20 ans, toux chronique, EFR normale, scanner thoracique normal. J'ai conclu aptitude sans restriction. J'ai un doute."
+expected_skill: /retex
+expected_parcours: A
+expected_output_contains:
+  - "CONTRADICTIONS"
+  - "ALTERNATIVES"
+  - "BIAIS"
+  - "RETEX TRACKER"
+must_not_contain:
+  - confirmation du diagnostic sans analyse
+  - donnees nominatives

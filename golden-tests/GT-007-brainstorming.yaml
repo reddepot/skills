@@ -1,0 +1,12 @@
+id: GT-007
+description: "Demande d'ideation creative SST"
+input: "/brainstorming comment ameliorer le suivi des travailleurs de nuit en SPSTI"
+expected_skill: /brainstorming
+expected_output_contains:
+  - "Wow"
+  - "Now"
+  - "angles morts"
+  - "NAF"
+must_not_contain:
+  - donnees nominatives
+  - Claude via API

@@ -13,5 +13,7 @@ output:
   sections:
     - synthese_gibbs (parcours A)
     - rapport_qualite (parcours D)
-    - micro_tracker
+    - conformite_contrat (parcours D)
+    - findings (parcours D)
+    - micro_tracker (parcours A/B/C)
 anti_sycophancy_profile: modere

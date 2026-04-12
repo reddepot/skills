@@ -5,9 +5,9 @@ input:
     - name: brief
       type: string
   optional:
-    - name: score_routage
-      type: integer
-      description: "Score /10 (si /oriente l'a deja calcule)"
+    - name: carte_de_sens
+      type: string
+      description: "Carte de sens structuree (si /oriente a ete execute en amont)"
 output:
   format: markdown
   sections:
