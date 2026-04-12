@@ -1,0 +1,14 @@
+skill: /oriente
+version: v1
+input:
+  required:
+    - name: demande
+      type: string
+      description: "Demande brute (texte ou dictée vocale)"
+output:
+  format: markdown
+  sections:
+    - carte_de_sens (si non-evident)
+    - skill_recommande
+    - pipeline_suggere (si combo)
+anti_sycophancy_profile: modere

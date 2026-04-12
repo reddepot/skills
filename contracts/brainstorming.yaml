@@ -1,0 +1,18 @@
+skill: /brainstorming
+version: v4.1
+input:
+  required:
+    - name: probleme
+      type: string
+  optional:
+    - name: methode
+      type: enum [brainwriting, scamper, chapeaux, inversion, analogie, triz, matrice, starbursting, cps, bio]
+output:
+  format: markdown
+  sections:
+    - idees_wow
+    - idees_now
+    - pepites_horizon
+    - angles_morts
+    - prochaine_etape
+anti_sycophancy_profile: creatif

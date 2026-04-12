@@ -1,0 +1,17 @@
+skill: /retex
+version: v1+
+input:
+  required:
+    - name: cas_ou_output
+      type: string
+      description: "Cas clinique, transcription, ou output de skill a evaluer"
+  optional:
+    - name: parcours
+      type: enum [A_cas_reel, B_entrainement, C_bilan, D_qualite]
+output:
+  format: markdown
+  sections:
+    - synthese_gibbs (parcours A)
+    - rapport_qualite (parcours D)
+    - micro_tracker
+anti_sycophancy_profile: modere

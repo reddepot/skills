@@ -1,0 +1,17 @@
+skill: /document
+version: v3
+input:
+  required:
+    - name: sujet
+      type: string
+  optional:
+    - name: format_destination
+      type: enum [chat, projet_claude, word, pdf]
+      default: chat
+output:
+  format: markdown
+  sections:
+    - document_final (YAML frontmatter + corps)
+    - limites (si confiance mixte)
+    - lessons_learned (critique)
+anti_sycophancy_profile: critique

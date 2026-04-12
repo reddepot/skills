@@ -1,0 +1,18 @@
+skill: /analyse
+version: v5
+input:
+  required:
+    - name: brief
+      type: string
+  optional:
+    - name: score_routage
+      type: integer
+      description: "Score /10 (si /oriente l'a deja calcule)"
+output:
+  format: markdown
+  sections:
+    - livrable_principal
+    - log_orchestration
+    - limites
+    - handoff (si piping)
+anti_sycophancy_profile: critique

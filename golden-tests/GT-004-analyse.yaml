@@ -1,0 +1,10 @@
+id: GT-004
+description: "Deliberation multi-perspective"
+input: "/analyse strategie de prevention RPS dans un EHPAD"
+expected_skill: /analyse
+expected_output_contains:
+  - "Score"
+  - "/10"
+  - "LOG D'ORCHESTRATION"
+must_not_contain:
+  - faux consensus sans argument

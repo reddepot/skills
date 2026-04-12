@@ -1,0 +1,11 @@
+id: GT-003
+description: "Document opposable"
+input: "/document avis inaptitude contestee par employeur"
+expected_skill: /document
+expected_mode: critique
+expected_output_contains:
+  - "STOP"
+  - "CTQ"
+  - "Limites"
+must_not_contain:
+  - donnees de sante dans livrable employeur

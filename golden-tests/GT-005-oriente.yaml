@@ -1,0 +1,8 @@
+id: GT-005
+description: "Demande ambigue necessite triage"
+input: "j'ai un probleme avec un salarie qui revient apres un AT et l'employeur veut pas amenager le poste et en plus y a peut-etre une MP aussi"
+expected_skill: /oriente
+expected_routing: "/expertise > /document"
+expected_output_contains:
+  - "carte de sens"
+  - "skill"

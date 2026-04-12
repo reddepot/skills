@@ -1,0 +1,16 @@
+skill: /jury
+version: v4.1
+input:
+  required:
+    - name: question
+      type: string
+  optional:
+    - name: panel_type
+      type: enum [A_sst, B_code, C_judge, D_general]
+output:
+  format: markdown
+  sections:
+    - synthese_multi_modeles
+    - provenance_par_modele
+    - dissensus
+anti_sycophancy_profile: modere

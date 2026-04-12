@@ -1,0 +1,18 @@
+skill: /fiche
+version: v1
+input:
+  required:
+    - name: sujet_sst
+      type: string
+  optional:
+    - name: handoff_from
+      type: object
+      description: "Handoff de /expertise si pipeline"
+output:
+  format: markdown
+  sections:
+    - en_bref
+    - livrable_mdt_junior
+    - livrable_idst
+    - livrable_hse
+anti_sycophancy_profile: modere

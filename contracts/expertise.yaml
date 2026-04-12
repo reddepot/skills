@@ -1,0 +1,17 @@
+skill: /expertise
+version: v1
+input:
+  required:
+    - name: sujet_sst
+      type: string
+output:
+  format: markdown
+  sections:
+    - cadrage_combinatoire
+    - certain
+    - etabli
+    - discute_inconnu
+    - connexions
+    - sources_critiques
+    - handoff (si piping)
+anti_sycophancy_profile: modere

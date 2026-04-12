@@ -1,0 +1,11 @@
+id: GT-001
+description: "Question SST terrain classique"
+input: "Je vois un soudeur inox demain, quels risques ?"
+expected_skill: /fiche
+expected_output_contains:
+  - "chrome hexavalent"
+  - "VLEP"
+  - "SIR"
+  - "tableau"
+must_not_contain:
+  - donnees nominatives

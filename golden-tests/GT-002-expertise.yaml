@@ -1,0 +1,11 @@
+id: GT-002
+description: "Demande de recherche approfondie"
+input: "/expertise canal carpien tableau 57 poste caissiere"
+expected_skill: /expertise
+expected_output_contains:
+  - "[CERTAIN]"
+  - "[ÉTABLI]"
+  - "tableau 57"
+  - "bloc 4"
+must_not_contain:
+  - affirmation juridique sans source
