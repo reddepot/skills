@@ -132,3 +132,25 @@ Appliquer dès la rédaction, pas à la livraison :
 - Noms → [SALARIÉ], [ENTREPRISE], [MÉDECIN TRAITANT]
 - Dates de consultation → mois/année sauf si date exacte nécessaire
 - Exception : documents confraternels (secret médical partagé)
+
+---
+
+## 8. Cycle PDCA — quatuor de méthodes (2026-05-05)
+
+Le cycle Plan-Do-Check-Act adapté au dev IT mobilise 4 méthodes complémentaires :
+
+| Phase | Skill / Méthode | Rôle |
+|---|---|---|
+| **Plan** | POLYPRISM (méthode) + /decision + /avis + /expertise + /oriente | Penser/décider AVANT code |
+| **Do** | POLYBUILD (orchestrateur multi-LLM) + DEVCODE (méthode GATES V4) | Coder avec auditabilité |
+| **Check** | /polylens (audit 7 axes cross-culturel) | Auditer code écrit |
+| **Act** | /capitalize | Transformer findings/sessions/ADRs en assets memory durables |
+
+**Boucle reproductible** : POLYPRISM → POLYBUILD → POLYLENS → /capitalize → next iteration.
+
+**Règles de chaîne** :
+- /capitalize NE prend pas en input du code généré sans audit préalable. Si POLYBUILD produit code → /polylens doit passer avant /capitalize sur ces lessons.
+- /polylens P0 médico-juridique → /capitalize C0 obligatoire (propagation cross-projet + audit consistency memory).
+- Skip /capitalize acceptable pour bug fix < 30min sans surprise (équivalent /polylens skip ad-hoc).
+
+**Anti-pattern** : faire Check sans Act = lessons perdues 30-50% (état observé pre-/capitalize, cf. backlog « Maj feedback_methodo_stricte.md » récurrent jamais exécuté avant 2026-05-05).
