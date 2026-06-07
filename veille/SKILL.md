@@ -4,7 +4,7 @@ description: >
   Veille professionnelle automatisée santé-travail / médicale via RedAPI.
   Orchestre rss_poll (INRS, HAS, ANSM, Légifrance, BO Travail), anonymise les
   titres (défense en profondeur PII), indexe optionnellement dans embed_store,
-  et envoie un digest ntfy / email. Peut être planifié via scheduler pour
+  et envoie un digest Telegram / email. Peut être planifié via scheduler pour
   exécution quotidienne.
   DÉCLENCHEUR : /veille (toujours activer sans exception).
   IMPLICITES : « nouveautés RSS », « quoi de neuf INRS/HAS/ANSM »,
@@ -33,7 +33,7 @@ anonymize (PII défensive sur titres)
     ↓
 embed_store.add (optionnel, collection "veille")
     ↓
-webhook_notify → ntfy / Telegram
+webhook_notify → Telegram
 ```
 
 L'outil MCP `veille_engine` expose ce pipeline en un seul appel.
@@ -47,7 +47,7 @@ L'outil MCP `veille_engine` expose ce pipeline en un seul appel.
 ```
 
 Claude appelle `veille_engine` avec les sources par défaut (INRS, HAS, ANSM,
-Légifrance, BO Travail), notify = ntfy, embed = false.
+Légifrance, BO Travail), notify = telegram, embed = false.
 
 ### Ciblé sur une thématique
 
@@ -110,8 +110,8 @@ matin à 08:00 UTC avec les paramètres par défaut (ou précédents).
 |-----------|------|--------|------|
 | `sources` | list[str] | toutes | Clés `rss_poll` (inrs_nouveautes, has_recommandations, ansm_securite, ansm_actualites, legifrance_sante_travail, bo_travail) |
 | `keywords` | list[str] | — | Filtre OR titre + résumé |
-| `notify_channel` | str\|null | `ntfy` | `ntfy`, `telegram`, ou null |
-| `notify_topic` | str | env | Topic ntfy |
+| `notify_channel` | str\|null | `telegram` | `telegram` ou null |
+| `notify_topic` | str | env | Chat/canal Telegram cible |
 | `embed` | bool | false | Indexer dans embed_store |
 | `embed_collection` | str | `veille` | Collection de destination |
 | `max_notify_items` | int | 10 | Taille du digest |
